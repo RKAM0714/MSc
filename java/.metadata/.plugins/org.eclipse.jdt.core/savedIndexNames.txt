@@ -1,0 +1,5 @@
+INDEX VERSION 1.131+/home/mav/Documents/YCS/java/.metadata/.plugins/org.eclipse.jdt.core
+1865797976.index
+1519498844.index
+3459911116.index
+4168597391.index
