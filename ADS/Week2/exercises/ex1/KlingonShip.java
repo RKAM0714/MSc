@@ -5,6 +5,8 @@
  * @author (your name) 
  * @version (a version number or a date)
  */
+import java.util.*;
+	
 public class KlingonShip
 {
 	double photonPower = 45;
@@ -29,4 +31,17 @@ public class KlingonShip
 		return dangerLevel;		
 	}
 	
+	public void promptSettings()
+	{
+		Scanner sc=new Scanner(System.in);
+		
+		System.out.println("Enter the photon power:");
+		photonPower = sc.nextInt();
+		
+		System.out.println("Enter the threat factor:");
+		threatFactor = sc.nextInt();
+	
+		System.out.println("Enter the cosmic proximity:");
+		cosmicProximity = sc.nextInt();
+	}
 }
