@@ -1,4 +1,4 @@
-
+cd AD
 /**
  * A Class to test the Password class
  * 
