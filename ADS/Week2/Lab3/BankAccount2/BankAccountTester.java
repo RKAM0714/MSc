@@ -21,13 +21,19 @@ public class BankAccountTester
       
       //The code appears to set the interest rate for account2 only, 
       //However interestRate is a static variable, so will apply to all accounts
-      account2.setInterestRate(10);
+      account2.setInterestRate(20);
       
       //Now check the interest rate for both accounts
       System.out.println("After set: Interest Rate for account1: "  + account1.getInterestRate());
       System.out.println("After set: Interest Rate for account2: "  + account2.getInterestRate());
-      
+      account1.deposit(1000);
+      account1.addInterest();
+      account2.deposit(1100);
 
-     }
+      System.out.println(account1.getBalance());
+      System.out.println(account2.getBalance());
+
+
+   }
 
 }
