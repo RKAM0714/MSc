@@ -25,7 +25,7 @@ public class Histogram {
 
          // print bar of asterisks
          for ( int stars = 0; stars < hArray[ counter ]; stars++ )
-            output += "*";
+            output += "A";
       }
       //Create a new text area object to hold the text
       JTextArea outputArea = new JTextArea();

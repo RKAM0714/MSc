@@ -1,24 +1,36 @@
-
-/**
- * Class to demonstrate Arrays, using JTextArea and 
- * a review of running programs as stand-alone apps
- * 
- * 
- */
-
 import javax.swing.*;
 
 public class BirdTable {
-
-
-   // main method begins execution of Java application
-   public static void main( String args[] )
-   {
-      //Declare and build an array interactively - see the Temperature Project
-   
-      
-      
-      //Display Output using a histogram of '*' - see Histogram Project
-   
+   public static void main( String args[] ) {
+      BirdTable b = new BirdTable();
+      b.interactiveArray();
    }
+   public void interactiveArray() {
+
+      int[] numberBlueTits = new int[7];
+      String strInput;
+      int intInput;
+
+      for (int i = 0; i < numberBlueTits.length; i++) {
+         strInput = JOptionPane.showInputDialog("Enter daily Blue Tit count " + (i + 1));
+         intInput = Integer.parseInt(strInput);
+         numberBlueTits[i] =intInput;
+      }
+
+      String outputHistogramHeading = "Day\tNo. of Blue Tits\tHistogram";
+
+      for (int counter = 0; counter < numberBlueTits.length; counter++){
+         outputHistogramHeading += "\n" + counter + "\t" + numberBlueTits[counter] + "\t";
+
+         for (int histogramStars = 0; histogramStars < numberBlueTits[counter]; histogramStars++)
+            outputHistogramHeading += "*";
+
+      }
+
+      JTextArea outputArea = new JTextArea();
+      outputArea.setText(outputHistogramHeading);
+
+      JOptionPane.showMessageDialog(null, outputArea, "Blue Tit Counter", JOptionPane.INFORMATION_MESSAGE);
+      }
+
 }
