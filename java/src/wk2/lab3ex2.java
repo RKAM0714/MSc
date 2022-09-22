@@ -2,6 +2,8 @@ package wk2;
 
 import java.util.ArrayList;
 
+// Ross
+
 public class lab3ex2 {
     private ArrayList shoppingList;
 
